@@ -1,0 +1,27 @@
+[debug] [2018-08-07T12:12:39.696Z] ----------------------------------------------------------------------
+[debug] [2018-08-07T12:12:39.698Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-08-07T12:12:39.699Z] CLI Version:   3.19.0
+[debug] [2018-08-07T12:12:39.699Z] Platform:      darwin
+[debug] [2018-08-07T12:12:39.699Z] Node Version:  v8.11.1
+[debug] [2018-08-07T12:12:39.699Z] Time:          Tue Aug 07 2018 05:12:39 GMT-0700 (PDT)
+[debug] [2018-08-07T12:12:39.700Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-07T12:12:39.712Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-07T12:12:39.712Z] > authorizing via signed-in user
+[debug] [2018-08-07T12:12:39.714Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/weandyou-7c667  
+  
+ Tue Aug 07 2018 05:12:39 GMT-0700 (PDT)
+[debug] [2018-08-07T12:12:40.188Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-07T12:12:40.189Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/weandyou-7c667/tokens  
+  
+ Tue Aug 07 2018 05:12:40 GMT-0700 (PDT)
+[debug] [2018-08-07T12:12:40.731Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'weandyou-7c667'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting
+[debug] [2018-08-07T12:12:43.176Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/weandyou-7c667  
+  
+ Tue Aug 07 2018 05:12:43 GMT-0700 (PDT)
