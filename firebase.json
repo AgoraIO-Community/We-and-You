@@ -18,6 +18,14 @@
       {
         "source": "/users",
         "function": "application"
+      },
+      {
+        "source": "/call",
+        "function": "application"
+      },
+      {
+        "source": "/volunteer",
+        "function": "application"
       }
     ]
   },

@@ -18,11 +18,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //----------------------------ROUTES----------------------------
 app.get('/', function (req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: 'We & You' });
 });
 
 app.get('/users', function (req, res, next) {
     res.render('agora', { title: 'Agora Shk' });
+});
+
+app.get('/call', function (req, res, next) {
+    res.render('call', { title: 'Agora Shk' });
+});
+
+app.get('/volunteer', function (req, res, next) {
+    res.render('volunteer', { title: 'Agora Shk' });
 });
 //----------------------------ROUTES----------------------------
 
