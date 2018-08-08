@@ -1,0 +1,163 @@
+[debug] [2018-08-08T19:43:40.014Z] ----------------------------------------------------------------------
+[debug] [2018-08-08T19:43:40.017Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-08-08T19:43:40.017Z] CLI Version:   3.19.0
+[debug] [2018-08-08T19:43:40.017Z] Platform:      darwin
+[debug] [2018-08-08T19:43:40.017Z] Node Version:  v8.11.1
+[debug] [2018-08-08T19:43:40.018Z] Time:          Wed Aug 08 2018 12:43:40 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:40.018Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-08T19:43:40.044Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-08T19:43:40.045Z] > authorizing via signed-in user
+[debug] [2018-08-08T19:43:40.051Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/weandyou-7c667  
+  
+ Wed Aug 08 2018 12:43:40 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:40.887Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:40.887Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/weandyou-7c667/tokens  
+  
+ Wed Aug 08 2018 12:43:40 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:41.458Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'weandyou-7c667'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting
+[debug] [2018-08-08T19:43:44.953Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/weandyou-7c667  
+  
+ Wed Aug 08 2018 12:43:44 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:45.759Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-08-08T19:43:45.762Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/weandyou-7c667:test  
+ { source: { files: [ [Object] ] } } 
+ Wed Aug 08 2018 12:43:45 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:46.372Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-08-08T19:43:46.376Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/weandyou-7c667:test  
+ { source: { files: [ [Object] ] } } 
+ Wed Aug 08 2018 12:43:46 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:46.766Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-08-08T19:43:46.768Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.12.1",
+    "firebase-functions": "^1.0.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-08-08T19:43:46.768Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/weandyou-7c667?view=CONSUMER_VIEW  
+  
+ Wed Aug 08 2018 12:43:46 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:46.769Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/weandyou-7c667?view=CONSUMER_VIEW  
+  
+ Wed Aug 08 2018 12:43:46 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:47.908Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:48.019Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-08-08T19:43:48.020Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/weandyou-7c667  
+  
+ Wed Aug 08 2018 12:43:48 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:48.511Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:48.511Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/64203246790:getServerAppConfig  
+  
+ Wed Aug 08 2018 12:43:48 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:49.081Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-08-08T19:43:49.083Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/weandyou-7c667/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Wed Aug 08 2018 12:43:49 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:49.736Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:49.736Z] [rules] created ruleset projects/weandyou-7c667/rulesets/3887fdfe-1015-4948-8319-3627b56f7582
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-08-08T19:43:49.738Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/weandyou-7c667/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Wed Aug 08 2018 12:43:49 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:49.739Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/weandyou-7c667/databases/(default)/indexes  
+  
+ Wed Aug 08 2018 12:43:49 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:50.250Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:50.250Z] [rules] created ruleset projects/weandyou-7c667/rulesets/364633f6-884c-4a88-a27d-de7bd9424090
+[debug] [2018-08-08T19:43:50.301Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-08-08T19:43:50.302Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/weandyou-7c667/configs  
+  
+ Wed Aug 08 2018 12:43:50 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:50.871Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (43.38 KB) for uploading
+[debug] [2018-08-08T19:43:51.225Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/weandyou-7c667/locations/us-central1/functions:generateUploadUrl  
+  
+ Wed Aug 08 2018 12:43:51 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:52.035Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:52.036Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-1d44799a-fb10-4016-8abf-da8e98b11700/e09ef4ce-3224-4abd-a353-6cf224aa3dcc.zip?GoogleAccessId=service-64203246790@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533759231&Signature=BYjOz6CLEXZFcGFRdQYEoi%2FRNLOiF4KnBbdxGywL0shewNA19T2vpcPDA81p%2BDQ3zkTyEOAVCD4P06I%2FakQXKbz1UFSsP4dgxfSwDCgY7da5dDoU4Ivo3A%2FAxTtMrOZpmgnhcMBz2pPZadp2h0u3QiAYZQeOgYmRhgHIkYTCW6LrwUzs12s9wj3nOsB0Td9dYOxeSGLCCvwPHjRUcwR27UOyNIgZE%2BOu5jMFAjBsfBpUImgXoHetLZnQJAIT7qmDzZyIZDaSJC6vJprMYXcH%2F%2FIwSqg8LQ6gcaBGSeecMcqeI1pC70cj1njqusyN6A0v096HGX%2Ff9t2mxyw6BHzxgQ%3D%3D  
+ ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 44426,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     destroyed: false,
+     defaultEncoding: 'utf8',
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: '/var/folders/x2/y3t52ygj407bn5vm9q1vwkhm0000gn/T/firebase-functions-18668VX2oENYXFGrZ.zip',
+  fd: 19,
+  flags: 'r',
+  mode: 438,
+  start: 0,
+  end: Infinity,
+  autoClose: true,
+  pos: 131072,
+  bytesRead: 44426 } 
+ Wed Aug 08 2018 12:43:52 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:53.116Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[info] i  hosting: preparing public directory for upload...
+[warn] ⚠  Warning: Public directory does not contain index.html
+[debug] [2018-08-08T19:43:53.166Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/weandyou-7c667/uploads/-LJQ3GJiHLOJR3isrbwT?fileCount=11&message=  
+  
+ Wed Aug 08 2018 12:43:53 GMT-0700 (PDT)
+[debug] [2018-08-08T19:43:57.210Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-08T19:43:57.210Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 11 files uploaded successfully
+[debug] [2018-08-08T19:43:58.035Z] [hosting] deploy completed after 4918ms
+[debug] [2018-08-08T19:43:58.381Z] [rules] releasing firebase.storage/weandyou-7c667.appspot.com with ruleset projects/weandyou-7c667/rulesets/3887fdfe-1015-4948-8319-3627b56f7582
+[debug] [2018-08-08T19:43:58.382Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/weandyou-7c667/releases/firebase.storage/weandyou-7c667.appspot.com  
+ { release: 
+   { name: 'projects/weandyou-7c667/releases/firebase.storage/weandyou-7c667.appspot.com',
+     rulesetName: 'projects/weandyou-7c667/rulesets/3887fdfe-1015-4948-8319-3627b56f7582' } } 
+ Wed Aug 08 2018 12:43:58 GMT-0700 (PDT)

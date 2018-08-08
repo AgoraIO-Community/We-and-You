@@ -32,6 +32,17 @@ app.get('/call', function (req, res, next) {
 app.get('/volunteer', function (req, res, next) {
     res.render('volunteer', { title: 'Agora Shk' });
 });
+
+app.get('/efa562b4e3da7df859dd7ebdbfb70618', function (req, res, next) {
+    res.json({
+        "apiKey": "AIzaSyD9DeyZDsZDvzZXy0HzWN3jQ2uXckR9qes",
+        "authDomain": "weandyou-7c667.firebaseapp.com",
+        "databaseURL": "https://weandyou-7c667.firebaseio.com",
+        "projectId": "weandyou-7c667",
+        "storageBucket": "weandyou-7c667.appspot.com",
+        "messagingSenderId": "64203246790"
+    });
+});
 //----------------------------ROUTES----------------------------
 
 app.use(function (req, res, next) {
