@@ -21,16 +21,16 @@ app.get('/', function (req, res, next) {
     res.render('index', { title: 'We & You' });
 });
 
-app.get('/users', function (req, res, next) {
-    res.render('agora', { title: 'Agora Shk' });
+app.get('/agora', function (req, res, next) {
+    res.render('agora', { title: 'Agora Testing' });
 });
 
 app.get('/call', function (req, res, next) {
-    res.render('call', { title: 'Agora Shk' });
+    res.render('call', { title: 'Get Help Now' });
 });
 
 app.get('/volunteer', function (req, res, next) {
-    res.render('volunteer', { title: 'Agora Shk' });
+    res.render('volunteer', { title: 'Help Out Now' });
 });
 
 app.get('/efa562b4e3da7df859dd7ebdbfb70618', function (req, res, next) {

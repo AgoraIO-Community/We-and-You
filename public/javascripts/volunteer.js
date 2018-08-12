@@ -4,7 +4,7 @@ $(() => {
 	req.addEventListener("load", (x) => {
 		admin = JSON.parse(x.currentTarget.responseText);
 		// console.log(x.currentTarget.responseText);
-		var app = firebase.initializeApp(admin); // connect to cloud Firebase app with habitree's credentials
+		var app = firebase.initializeApp(admin); // connect to cloud Firebase app with we&you's credentials
 
 		db = firebase.firestore(); // connect to cloud Firestore database
 		docArr = []; // array of user documents in database
@@ -20,6 +20,7 @@ $(() => {
 	req.open("GET", "/efa562b4e3da7df859dd7ebdbfb70618");
 	req.send();
 
+	var signStatus = false;
 	$("#sign").click(() => {
 		signInButton();
 	});
@@ -31,11 +32,35 @@ $(() => {
 			myDoc = db.collection("users").doc(user.uid); // sets or creates doc for user
 			$("#sign").html("<h2>" + user.displayName + "</h1>"); // puts user's name on sign in button
 			if (!docArr.includes(user.uid)) { // if new user
-				alert("Welcome to We & You, " + user.displayName); // welcomes new user
-				myDoc.set({ // lays out format for new user document
+				alert("Welcome to We & You, " + user.displayName.split(" ")[0]); // welcomes new user
+				myDoc.set({ // la ys out format for new user document
 					firstName: user.displayName.split(" ")[0],
 					lastName: user.displayName.split(" ")[1],
 				});
+
+				// ask demographic questions
+				// submit answers to firebase w/ Next button
+				// leads them to page for tutorial
+				// take 20 question quiz after tutorial
+				// schedule meeting to be verified
+				// after verification, set fb VER to "true"
+				// now when they sign in to /help, 
+					// lets them into helper console with video chat and load balancing
+				// click "ready for caller", sets fb READY to "true"
+
+				// caller opens /call
+				// 
+
+				// when someone calls, fb function goes through all documents with "READY" true
+				// caller is given token based on a ready helper's fb id
+				// caller has 30 seconds to hit "join", and enter the call
+				// if caller doesn't join and others are waiting in line behind caller,
+					// next in line receives token of volunteer and has 30 seconds
+					// caller gets sent back 1 in line
+				// if caller joins
+					// set READY to "false"
+				// when call is over, READY remains false until volunteer clicks "ready for caller" again
+
 			}
 
 			else {
