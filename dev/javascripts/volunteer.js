@@ -49,7 +49,10 @@ $(() => {
 				// click "ready for caller", sets fb READY to "true"
 
 				// caller opens /call
-				// 
+				// put in basic demographics
+				// click get in contact
+				// if a volunteer is available, his token is given
+				// else, put in line and given waiting screen
 
 				// when someone calls, fb function goes through all documents with "READY" true
 				// caller is given token based on a ready helper's fb id
