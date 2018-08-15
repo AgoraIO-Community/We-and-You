@@ -5,7 +5,7 @@ class Volunteer extends Component {
   render() {
     return (
       <div className="Volunteer">
-        <h1> Welcome to my Volunteer </h1>       
+        <h1> Welcome to my Volunteer </h1>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home.js';
-import Volunteer from './components/Volunteer.js';
-import Call from './components/Call.js';
+import Home from './components/Home.jsx';
+import Volunteer from './components/Volunteer.jsx';
+import Call from './components/Call.jsx';
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div>
-            <Route path="" component={Home} />
+            <Route path="/" exact="true" component={Home} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/call" component={Call} />
           </div>

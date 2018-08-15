@@ -5,7 +5,7 @@ class Call extends Component {
   render() {
     return (
       <div className="Call">
-        <h1> Welcome to my Call </h1>       
+        <h1> Welcome to my Call </h1>     
       </div>
     );
   }
